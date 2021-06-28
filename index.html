@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./cake.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Hope's Birthday Countdown</title>
+    <script src="./protect.js"></script>
+  </head>
+  <body oncontextmenu="return false">
+    <audio autoplay loop id="music" controls>
+      <source src="./Love Alarm Falling Again.mp3" />
+    </audio>
+    <div class="container">
+      <h1 id="headline">Happy Birthday Hope</h1>
+      <div id="countdown">
+        <ul>
+          <li><span id="days"></span>days</li>
+          <li><span id="hours"></span>Hours</li>
+          <li><span id="minutes"></span>Minutes</li>
+          <li><span id="seconds"></span>Seconds</li>
+        </ul>
+      </div>
+      <div class="message">
+        <div id="content">
+          <span class="emoji">🥳</span>
+          <span class="emoji">🎉</span>
+          <span class="emoji">🎂</span>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./main.js"></script>
+    <script>
+      $("#music").hide();
+      $(".playAudio").click(() => {
+        $("#music").prop("muted", false);
+        $("#music")[0].play();
+      });
+      $(".playAudio").mouseover(() => {
+        $(".playAudio").html("❤️");
+      });
+      $(".playAudio").mouseout(() => {
+        $(".playAudio").html("Hope For You");
+        $(".playAudio").css("color", "black");
+      });
+    </script>
+  </body>
+</html>
